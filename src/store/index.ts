@@ -1,9 +1,11 @@
 import { atom } from 'jotai'
 
-import { CARD, computedLevelByExperience, computedProbabilityByLevel } from '@/lib/helper'
+import { computedLevelByExperience, computedProbabilityByLevel } from '@/lib/helper'
 import { HeroType } from '@/types'
 
-export const deckCardsAtom = atom<HeroType[]>(CARD) //牌库
+import data from '../data/data.json'
+
+export const deckCardsAtom = atom<HeroType[]>(data) //牌库
 
 export const activeCardsAtom = atom([{}]) // 上场牌
 

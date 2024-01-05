@@ -1,14 +1,4 @@
 import { HeroType, ProbabilityByLevelType } from '@/types'
-export const CARD: HeroType[] = [
-  {
-    name: 'Area',
-    cost: 1,
-    totalAmount: 5,
-    backgroundImage: '',
-    avatar: '',
-    synergies: ['', '']
-  }
-]
 
 export function computedLevelByExperience(experience: number): number {
   return experience * 2
