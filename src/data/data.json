@@ -1,0 +1,662 @@
+[
+  {
+    "name": "阿狸",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "阿卡丽",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "阿木木",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "安妮",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "厄斐琉斯",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "巴德",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "布里茨",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "凯特琳",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "库奇",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "艾克",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "伊芙琳",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "伊泽瑞尔",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "纳尔",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "古拉加斯",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "俄洛伊",
+    "cost": 5,
+    "totalAmount": 10,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "贾克斯",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "烬",
+    "cost": 5,
+    "totalAmount": 10,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "金克丝",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "卡尔萨斯",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "卡特琳娜",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "凯尔",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "凯隐",
+    "cost": 5,
+    "totalAmount": 10,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "凯南",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "莉莉娅",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "卢锡安",
+    "cost": 5,
+    "totalAmount": 10,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "璐璐",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "拉克丝",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "莫德凯撒",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "娜美",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "妮蔻",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "潘森",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "波比",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "奇亚娜",
+    "cost": 5,
+    "totalAmount": 10,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "锐雯",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "莎弥拉",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "赛娜",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "萨勒芬妮",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "瑟提",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "娑娜",
+    "cost": 5,
+    "totalAmount": 10,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "塔里克",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "锤石",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "图奇",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "厄加特",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "薇古丝",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "蔚",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "佛耶戈",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "亚索",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "永恩",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "约里克",
+    "cost": 5,
+    "totalAmount": 10,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "扎克",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "劫",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "吉格斯",
+    "cost": 5,
+    "totalAmount": 10,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "厄运小姐",
+    "cost": 3,
+    "totalAmount": 18,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "奥拉夫",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "塔姆",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "崔斯特",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "奎桑提",
+    "cost": 1,
+    "totalAmount": 29,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "卡莎",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "阿卡丽",
+    "cost": 4,
+    "totalAmount": 12,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "盖伦",
+    "cost": 2,
+    "totalAmount": 22,
+    "backgroundImage": "",
+    "avatar": "",
+    "synergies": [
+      "",
+      ""
+    ]
+  }
+]

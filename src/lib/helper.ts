@@ -1,7 +1,7 @@
 import { HeroType, ProbabilityByLevelType } from '@/types'
 export const CARD: HeroType[] = [
   {
-    name: 'foo',
+    name: 'Area',
     cost: 1,
     totalAmount: 5,
     backgroundImage: '',
