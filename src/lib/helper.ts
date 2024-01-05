@@ -22,92 +22,92 @@ export function computedProbabilityByLevel(level: number) {
   switch (level) {
     case 1: {
       return {
-        fiveCostCards: 0,
-        fourCostCards: 0,
-        threeCostCards: 0,
-        twoCostCards: 0,
-        oneCostCards: 100
+        5: 0,
+        4: 0,
+        3: 0,
+        2: 0,
+        1: 100
       }
     }
     case 2: {
       return {
-        fiveCostCards: 0,
-        fourCostCards: 0,
-        threeCostCards: 0,
-        twoCostCards: 0,
-        oneCostCards: 100
+        5: 0,
+        4: 0,
+        3: 0,
+        2: 0,
+        1: 100
       }
     }
     case 3: {
       return {
-        fiveCostCards: 0,
-        fourCostCards: 0,
-        threeCostCards: 0,
-        twoCostCards: 25,
-        oneCostCards: 75
+        5: 0,
+        4: 0,
+        3: 0,
+        2: 25,
+        1: 75
       }
     }
     case 4: {
       return {
-        fiveCostCards: 0,
-        fourCostCards: 0,
-        threeCostCards: 15,
-        twoCostCards: 30,
-        oneCostCards: 55
+        5: 0,
+        4: 0,
+        3: 15,
+        2: 30,
+        1: 55
       }
     }
     case 5: {
       return {
-        fiveCostCards: 0,
-        fourCostCards: 2,
-        threeCostCards: 20,
-        twoCostCards: 33,
-        oneCostCards: 45
+        5: 0,
+        4: 2,
+        3: 20,
+        2: 33,
+        1: 45
       }
     }
     case 6: {
       return {
-        fiveCostCards: 0,
-        fourCostCards: 5,
-        threeCostCards: 30,
-        twoCostCards: 40,
-        oneCostCards: 25
+        5: 0,
+        4: 5,
+        3: 30,
+        2: 40,
+        1: 25
       }
     }
     case 7: {
       return {
-        fiveCostCards: 1,
-        fourCostCards: 15,
-        threeCostCards: 35,
-        twoCostCards: 30,
-        oneCostCards: 19
+        5: 1,
+        4: 15,
+        3: 35,
+        2: 30,
+        1: 19
       }
     }
     case 8: {
       return {
-        fiveCostCards: 4,
-        fourCostCards: 25,
-        threeCostCards: 35,
-        twoCostCards: 20,
-        oneCostCards: 16
+        5: 4,
+        4: 25,
+        3: 35,
+        2: 20,
+        1: 16
       }
     }
     case 9: {
       return {
-        fiveCostCards: 16,
-        fourCostCards: 30,
-        threeCostCards: 30,
-        twoCostCards: 15,
-        oneCostCards: 9
+        5: 16,
+        4: 30,
+        3: 30,
+        2: 15,
+        1: 9
       }
     }
     case 10: {
       return {
-        fiveCostCards: 25,
-        fourCostCards: 40,
-        threeCostCards: 20,
-        twoCostCards: 10,
-        oneCostCards: 5
+        5: 25,
+        4: 40,
+        3: 20,
+        2: 10,
+        1: 5
       }
     }
   }
