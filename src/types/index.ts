@@ -1,7 +1,7 @@
 export interface HeroType {
+  id: number
   name: string
   cost: number
-  totalAmount: number
   backgroundImage: string
   avatar: string
   synergies: string[]

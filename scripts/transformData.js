@@ -40,15 +40,25 @@ readFile(filePath, 'utf8', (err, data) => {
     synergies: ['', '']
   }))
 
+  let generatedObjects = []
+  let idCounter = 1
+
+  transformedData.forEach((item) => {
+    for (let i = 0; i < item.totalAmount; i++) {
+      let newObject = { ...item, id: idCounter++ } // 复制对象并添加 id
+      delete newObject.totalAmount // 如果不需要 totalAmount 属性，可以删除
+      generatedObjects.push(newObject)
+    }
+  })
   // 转换成JSON字符串
-  const jsonString = JSON.stringify(transformedData, null, 2)
+  const jsonString = JSON.stringify(generatedObjects, null, 2)
 
   // 将结果保存到新文件
   writeFile(savePath, jsonString, 'utf8', (err) => {
     if (err) {
       console.error('写入文件时发生错误:', err)
     } else {
-      console.log('数据已成功保存到 transformedData.json')
+      console.log('数据已成功保存到 data.json')
     }
   })
 })

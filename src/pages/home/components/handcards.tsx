@@ -1,7 +1,7 @@
 import { useAtom, useAtomValue } from 'jotai'
 
 import { Button } from '@/components/ui/button'
-import { drawCards, pickHeroFromDeck } from '@/lib/helper'
+import { drawCards } from '@/lib/helper'
 import { benchCardsAtom, deckCardsAtom, handCardsAtom, playerLevelAtom, probabilityByLevelAtom } from '@/store'
 
 export default function HandCards() {
@@ -33,7 +33,7 @@ export default function HandCards() {
               key={index}
               onClick={() => {
                 if (benchCards.length < 9) {
-                  setDeckCards(pickHeroFromDeck(deckCards, handCard.name))
+                  setDeckCards((prevDeckCards) => prevDeckCards.filter((item) => item !== handCard))
                   setHandCards((prevHandCards) => prevHandCards.filter((item) => item !== handCard))
                   setBenchCards((prevBenchCards) => [...prevBenchCards, handCard])
                 }

@@ -132,22 +132,10 @@ export function findHeroFromDeck(deck: HeroType[], heroName: string) {
   return deck.find((hero) => hero.name === heroName)
 }
 
-export function pickHeroFromDeck(deck: HeroType[], heroName: string) {
-  return deck.map((hero) => {
-    if (hero.name === heroName && hero.totalAmount > 0) {
-      return { ...hero, totalAmount: hero.totalAmount - 1 }
-    } else {
-      return hero
-    }
-  })
+export function pickHeroFromDeck(deck: HeroType[], hero: HeroType) {
+  return deck.filter((item) => item.id !== hero.id)
 }
 
-export function putHeroToDeck(deck: HeroType[], heroName: string) {
-  return deck.map((hero) => {
-    if (hero.name === heroName && hero.totalAmount > 0) {
-      return { ...hero, totalAmount: hero.totalAmount + 1 }
-    } else {
-      return hero
-    }
-  })
+export function putHeroToDeck(deck: HeroType[], hero: HeroType) {
+  return [...deck, hero]
 }
