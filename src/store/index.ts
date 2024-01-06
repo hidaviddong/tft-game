@@ -2,7 +2,7 @@ import { atom } from 'jotai'
 
 import data from '@/data/data.json'
 import { computedProbabilityByLevel, drawCards } from '@/lib/helper'
-import { HeroType } from '@/types'
+import type { HeroType } from '@/types'
 
 export const deckCardsAtom = atom<HeroType[]>(data) //牌库
 

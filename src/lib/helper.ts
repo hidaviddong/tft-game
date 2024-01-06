@@ -1,4 +1,4 @@
-import { HeroType } from '@/types'
+import type { HeroType } from '@/types'
 
 export function computedProbabilityByLevel(level: number) {
   switch (level) {

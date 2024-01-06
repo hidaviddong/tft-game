@@ -1,3 +1,4 @@
+// import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { useCountdown, useTodayHero } from '@/hooks'
 
 import BenchCards from './components/benchcards'
@@ -15,6 +16,13 @@ export default function Home() {
       {isLoading && <h1>加载今日英雄中</h1>}
       {isSuccess && <h1>{data}</h1>}
       {isError && <h1>加载今日英雄错误!</h1>}
+      <div className="flex h-48 w-full space-x-4 bg-sky-50">
+        {/* 头像 */}
+        {/* <Avatar className="h-16 w-16">
+          <AvatarImage className="h-16 w-16" src={Ahri} />
+          <AvatarFallback>Ahri</AvatarFallback>
+        </Avatar> */}
+      </div>
       <BenchCards />
       <HandCards />
     </div>

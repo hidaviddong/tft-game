@@ -5,6 +5,8 @@ import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { drawCards } from '@/lib/helper'
 import { benchCardsAtom, deckCardsAtom, handCardsAtom, playerLevelAtom, probabilityByLevelAtom } from '@/store'
+
+import Hero from './hero'
 export default function HandCards() {
   const [playerLevel, setPlayerLevel] = useAtom(playerLevelAtom)
   const [benchCards, setBenchCards] = useAtom(benchCardsAtom)
@@ -37,8 +39,16 @@ export default function HandCards() {
   }
 
   return (
-    <div className="flex h-48 w-full flex-col items-center justify-center gap-x-4 bg-sky-200">
-      <div className="flex items-center justify-center space-x-4">
+    <div className="flex h-72 w-full flex-col items-center justify-center gap-x-4 bg-sky-200">
+      <div className="mt-4 flex space-x-4 bg-red-50">
+        刷新概率:
+        <span>一费：{probabilityByLevel[1]}</span>
+        <span>二费：{probabilityByLevel[2]}</span>
+        <span>三费：{probabilityByLevel[3]}</span>
+        <span>四费：{probabilityByLevel[4]}</span>
+        <span>五费：{probabilityByLevel[5]}</span>
+      </div>
+      <div className="flex items-center justify-center space-x-4 bg-red-100">
         <span>用户等级：{playerLevel}</span>
         <Button onClick={refreshRandomCards}>刷新英雄</Button>
         <Button disabled={playerLevel >= 10} onClick={buyExperience}>
@@ -46,10 +56,12 @@ export default function HandCards() {
         </Button>
       </div>
       <div className="mt-4 flex gap-x-2">
-        {handCards.map((handCard, index) => {
+        {handCards.map((handCard) => {
           return (
-            <Button
-              key={index}
+            <Hero
+              name={handCard.name}
+              cost={handCard.cost}
+              key={handCard.id}
               onClick={() => {
                 if (benchCards.length < 9) {
                   setDeckCards((prevDeckCards) => prevDeckCards.filter((item) => item !== handCard))
@@ -58,19 +70,10 @@ export default function HandCards() {
                 } else {
                   toast.error('备战区已满')
                 }
-              }}>
-              {handCard.name}
-            </Button>
+              }}
+            />
           )
         })}
-      </div>
-      <div className="mt-4 flex space-x-4">
-        刷新概率:
-        <span>一费：{probabilityByLevel[1]}</span>
-        <span>二费：{probabilityByLevel[2]}</span>
-        <span>三费：{probabilityByLevel[3]}</span>
-        <span>四费：{probabilityByLevel[4]}</span>
-        <span>五费：{probabilityByLevel[5]}</span>
       </div>
     </div>
   )
