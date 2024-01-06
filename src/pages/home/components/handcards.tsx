@@ -40,7 +40,7 @@ export default function HandCards() {
 
   return (
     <div className="flex h-72 w-full flex-col items-center justify-center gap-x-4 bg-sky-200">
-      <div className="mt-4 flex space-x-4 bg-red-50">
+      <div className="mt-4 flex space-x-4 ">
         刷新概率:
         <span>一费：{probabilityByLevel[1]}</span>
         <span>二费：{probabilityByLevel[2]}</span>
@@ -48,7 +48,7 @@ export default function HandCards() {
         <span>四费：{probabilityByLevel[4]}</span>
         <span>五费：{probabilityByLevel[5]}</span>
       </div>
-      <div className="flex items-center justify-center space-x-4 bg-red-100">
+      <div className="flex items-center justify-center space-x-4 ">
         <span>用户等级：{playerLevel}</span>
         <Button onClick={refreshRandomCards}>刷新英雄</Button>
         <Button disabled={playerLevel >= 10} onClick={buyExperience}>

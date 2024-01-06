@@ -10,7 +10,7 @@ const Hero = React.forwardRef<HTMLDivElement, HeroProps>(({ name, cost, onClick 
   return (
     <div
       ref={ref}
-      className="flex h-full w-64 cursor-pointer flex-col rounded-md border-4 border-double border-[#552359] bg-black"
+      className="flex h-full w-64 cursor-pointer flex-col rounded-md border-4 border-double border-[#552359] bg-black shadow-lg shadow-[#411348]/50"
       onClick={onClick}>
       <img className="border-1 h-4/5 w-full border-[#552359]" src={AhriCard} alt="Ahri"></img>
       <div className="flex h-1/5 w-full items-end justify-between bg-gradient-to-r from-[#411348] via-[#411348] to-[#821B6F] text-xl text-white">
