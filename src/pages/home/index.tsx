@@ -1,5 +1,6 @@
 import { useCountdown, useTodayHero } from '@/hooks'
 
+import BenchCards from './components/benchcards'
 import HandCards from './components/handcards'
 
 export default function Home() {
@@ -14,8 +15,7 @@ export default function Home() {
       {isLoading && <h1>加载今日英雄中</h1>}
       {isSuccess && <h1>{data}</h1>}
       {isError && <h1>加载今日英雄错误!</h1>}
-      <div className="h-48 w-full bg-sky-50">这是棋盘</div>
-      <div className="h-48 w-full bg-sky-100">这是备战区</div>
+      <BenchCards />
       <HandCards />
     </div>
   )

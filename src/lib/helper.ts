@@ -1,23 +1,5 @@
 import { HeroType } from '@/types'
 
-export function computedLevelByExperience(experience: number): number {
-  if (experience < 6) {
-    return 3 // 经验小于6，3级
-  } else if (experience < 10) {
-    return 4 // 经验6-9，4级
-  } else if (experience < 20) {
-    return 5 // 经验10-19，5级
-  } else if (experience < 36) {
-    return 6 // 经验20-35，6级
-  } else if (experience < 48) {
-    return 7 // 经验36-47，7级
-  } else if (experience < 80) {
-    return 8 // 经验48-79，8级
-  } else {
-    return 9 // 经验80及以上，9级
-  }
-}
-
 export function computedProbabilityByLevel(level: number) {
   switch (level) {
     case 1: {

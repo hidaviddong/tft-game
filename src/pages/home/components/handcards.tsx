@@ -1,39 +1,46 @@
 import { useAtom, useAtomValue } from 'jotai'
 
 import { Button } from '@/components/ui/button'
-import { drawCards } from '@/lib/helper'
-import {
-  deckCardsAtom,
-  handCardsAtom,
-  playerCoinsAtom,
-  playerExperienceAtom,
-  playerLevelAtom,
-  probabilityByLevelAtom
-} from '@/store'
+import { drawCards, pickHeroFromDeck } from '@/lib/helper'
+import { benchCardsAtom, deckCardsAtom, handCardsAtom, playerLevelAtom, probabilityByLevelAtom } from '@/store'
 
 export default function HandCards() {
-  const playerExperience = useAtomValue(playerExperienceAtom)
-  const playerLevel = useAtomValue(playerLevelAtom)
+  const [playerLevel, setPlayerLevel] = useAtom(playerLevelAtom)
+  const [benchCards, setBenchCards] = useAtom(benchCardsAtom)
   const probabilityByLevel = useAtomValue(probabilityByLevelAtom)
-  const playerCoins = useAtomValue(playerCoinsAtom)
-  const deckCards = useAtomValue(deckCardsAtom)
+  const [deckCards, setDeckCards] = useAtom(deckCardsAtom)
   const [handCards, setHandCards] = useAtom(handCardsAtom)
   function refreshRandomCards() {
     const randomCards = drawCards(deckCards, probabilityByLevel)
     setHandCards(randomCards)
   }
+  function buyExperience() {
+    setPlayerLevel((prevLevel) => prevLevel + 1)
+  }
   return (
     <div className="flex h-48 w-full flex-col items-center justify-center gap-x-4 bg-sky-200">
       <div className="flex items-center justify-center space-x-4">
-        <span>用户经验：{playerExperience}</span>
         <span>用户等级：{playerLevel}</span>
-        <span>用户金币：{playerCoins}</span>
         <Button onClick={refreshRandomCards}>刷新英雄</Button>
-        <Button>购买经验</Button>
+        <Button disabled={playerLevel === 10} onClick={buyExperience}>
+          购买经验
+        </Button>
       </div>
       <div className="mt-4 flex gap-x-2">
         {handCards.map((handCard, index) => {
-          return <span key={index}>{handCard.name}</span>
+          return (
+            <Button
+              key={index}
+              onClick={() => {
+                if (benchCards.length < 9) {
+                  setDeckCards(pickHeroFromDeck(deckCards, handCard.name))
+                  setHandCards((prevHandCards) => prevHandCards.filter((item) => item !== handCard))
+                  setBenchCards((prevBenchCards) => [...prevBenchCards, handCard])
+                }
+              }}>
+              {handCard.name}
+            </Button>
+          )
         })}
       </div>
       <div className="mt-4 flex space-x-4">

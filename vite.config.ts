@@ -13,7 +13,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/random': {
-        target: 'https://random.daviddong.me/',
+        target: 'https://tft.daviddong.me/random',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/random/, '')
       }
