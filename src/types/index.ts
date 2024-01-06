@@ -6,11 +6,13 @@ export interface HeroType {
   avatar: string
   synergies: string[]
 }
-
+export interface RandomType {
+  value: number
+}
 export interface ProbabilityByLevelType {
-  fiveCostCards: number
-  fourCostCards: number
-  threeCostCards: number
-  twoCostCards: number
-  oneCostCards: number
+  5: number
+  4: number
+  3: number
+  2: number
+  1: number
 }

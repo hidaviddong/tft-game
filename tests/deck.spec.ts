@@ -1,8 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
+import data from '@/data/data.json'
 import { computedLevelByExperience, findHeroFromDeck, pickHeroFromDeck, putHeroToDeck } from '@/lib/helper'
-
-import data from '../src/data/data.json'
 
 describe('DeckManager Operations', () => {
   test('should decrease the totalAmount of a hero in the deck when picked', () => {

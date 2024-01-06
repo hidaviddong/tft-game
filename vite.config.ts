@@ -12,10 +12,10 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': {
-        target: 'http://YOUR_API_SERVER:PORT',
+      '/random': {
+        target: 'https://random.daviddong.me/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        rewrite: (path) => path.replace(/^\/random/, '')
       }
     }
   }
