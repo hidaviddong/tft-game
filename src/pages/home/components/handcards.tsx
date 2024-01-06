@@ -1,5 +1,6 @@
 import { useKeyboardEvent } from '@react-hookz/web'
 import { useAtom, useAtomValue } from 'jotai'
+import { toast } from 'sonner'
 
 import { Button } from '@/components/ui/button'
 import { drawCards } from '@/lib/helper'
@@ -30,6 +31,8 @@ export default function HandCards() {
   function buyExperience() {
     if (playerLevel < 10) {
       setPlayerLevel(playerLevel + 1)
+    } else {
+      toast.error('等级已满')
     }
   }
 
@@ -52,6 +55,8 @@ export default function HandCards() {
                   setDeckCards((prevDeckCards) => prevDeckCards.filter((item) => item !== handCard))
                   setHandCards((prevHandCards) => prevHandCards.filter((item) => item !== handCard))
                   setBenchCards((prevBenchCards) => [...prevBenchCards, handCard])
+                } else {
+                  toast.error('备战区已满')
                 }
               }}>
               {handCard.name}
