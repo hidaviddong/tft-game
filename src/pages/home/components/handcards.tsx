@@ -1,28 +1,44 @@
+import { useKeyboardEvent } from '@react-hookz/web'
 import { useAtom, useAtomValue } from 'jotai'
 
 import { Button } from '@/components/ui/button'
 import { drawCards } from '@/lib/helper'
 import { benchCardsAtom, deckCardsAtom, handCardsAtom, playerLevelAtom, probabilityByLevelAtom } from '@/store'
-
 export default function HandCards() {
   const [playerLevel, setPlayerLevel] = useAtom(playerLevelAtom)
   const [benchCards, setBenchCards] = useAtom(benchCardsAtom)
   const probabilityByLevel = useAtomValue(probabilityByLevelAtom)
   const [deckCards, setDeckCards] = useAtom(deckCardsAtom)
   const [handCards, setHandCards] = useAtom(handCardsAtom)
+
+  useKeyboardEvent(
+    true,
+    (ev) => {
+      if (ev.key.toLowerCase() === 'd') {
+        refreshRandomCards()
+      } else if (ev.key.toLowerCase() === 'f') {
+        buyExperience()
+      }
+    },
+    [],
+    { eventOptions: { passive: true } }
+  )
   function refreshRandomCards() {
     const randomCards = drawCards(deckCards, probabilityByLevel)
     setHandCards(randomCards)
   }
   function buyExperience() {
-    setPlayerLevel((prevLevel) => prevLevel + 1)
+    if (playerLevel < 10) {
+      setPlayerLevel(playerLevel + 1)
+    }
   }
+
   return (
     <div className="flex h-48 w-full flex-col items-center justify-center gap-x-4 bg-sky-200">
       <div className="flex items-center justify-center space-x-4">
         <span>用户等级：{playerLevel}</span>
         <Button onClick={refreshRandomCards}>刷新英雄</Button>
-        <Button disabled={playerLevel === 10} onClick={buyExperience}>
+        <Button disabled={playerLevel >= 10} onClick={buyExperience}>
           购买经验
         </Button>
       </div>
