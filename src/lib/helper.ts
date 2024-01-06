@@ -110,7 +110,40 @@ export function computedProbabilityByLevel(level: number) {
         1: 5
       }
     }
+    default:
+      return {
+        5: 0,
+        4: 0,
+        3: 0,
+        2: 0,
+        1: 0
+      }
   }
+}
+
+export function drawCards(deckCards: HeroType[], probabilityByLevel: ReturnType<typeof computedProbabilityByLevel>) {
+  const accumulatedWeights: number[] = []
+  let totalWeight = 0
+
+  // 创建累积权重数组
+  Object.values(probabilityByLevel).forEach((probability) => {
+    totalWeight += probability
+    accumulatedWeights.push(totalWeight)
+  })
+  const handCards = []
+
+  for (let i = 0; i < 5; i++) {
+    const randomNum = Math.random() * totalWeight
+    const chosenCostIndex = accumulatedWeights.findIndex((weight) => randomNum <= weight)
+    const chosenCost = Object.keys(probabilityByLevel)[chosenCostIndex]
+
+    const possibleCards = deckCards.filter((card) => card.cost === Number(chosenCost))
+    if (possibleCards.length > 0) {
+      const randomCard = possibleCards[Math.floor(Math.random() * possibleCards.length)]
+      handCards.push(randomCard)
+    }
+  }
+  return handCards
 }
 
 export function findHeroFromDeck(deck: HeroType[], heroName: string) {
