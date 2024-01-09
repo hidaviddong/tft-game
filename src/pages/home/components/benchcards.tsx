@@ -2,7 +2,7 @@ import { useKeyboardEvent } from '@react-hookz/web'
 import { useAtom, useSetAtom } from 'jotai'
 import { useEffect, useState } from 'react'
 
-import { Button } from '@/components/ui/button'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { benchCardsAtom, deckCardsAtom } from '@/store'
 import type { HeroType } from '@/types'
 
@@ -38,16 +38,21 @@ export default function BenchCards() {
          * 如果benchCards里面有6个一样的英雄，则展示两个两星的
          * 如果有9 则是1个三星
          */
-        <Button
-          onMouseEnter={() => {
-            setHoverHero(benchCard)
-          }}
-          onMouseLeave={() => {
-            setHoverHero(null)
-          }}
-          key={index}>
-          {benchCard.name}
-        </Button>
+
+        <Avatar className="h-16 w-16">
+          <AvatarImage
+            className="h-16 w-16"
+            onMouseEnter={() => {
+              setHoverHero(benchCard)
+            }}
+            onMouseLeave={() => {
+              setHoverHero(null)
+            }}
+            key={index}
+            src={`https://imgtft.daviddong.me/${benchCard.name}.png`}
+          />
+          <AvatarFallback> {benchCard.name}</AvatarFallback>
+        </Avatar>
       ))}
     </div>
   )

@@ -29,9 +29,14 @@ readFile(filePath, 'utf8', (err, data) => {
     }
     return costToAmountMap[cost]
   }
+  // 去除'和空格符号，因为要和图片链接对应
+  function removeApostrophesAndSpaces(str) {
+    if (str === `Kai'Sa`) return 'Kaisa'
+    return str.replace(/'| /g, '')
+  }
   // 转换数据结构
   const transformedData = Object.values(jsonData.data).map((champion) => ({
-    name: champion.name,
+    name: removeApostrophesAndSpaces(champion.name),
     cost: champion.tier,
     totalAmount: calculateTotalAmount(champion.tier)
   }))
