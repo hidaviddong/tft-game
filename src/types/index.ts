@@ -2,9 +2,6 @@ export interface HeroType {
   id: number
   name: string
   cost: number
-  backgroundImage: string
-  avatar: string
-  synergies: string[]
 }
 export interface RandomType {
   value: number
