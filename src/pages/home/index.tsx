@@ -19,7 +19,7 @@ export default function Home() {
       <div className="flex h-48 w-full space-x-4 bg-sky-50">
         {/* 头像 */}
         <Avatar className="h-16 w-16">
-          <AvatarImage className="h-16 w-16" src={'https://imgtft.daviddong.me/Ahri.jpg'} />
+          <AvatarImage className="h-16 w-16" src={'https://imgtft.daviddong.me/Ahri.png'} />
           <AvatarFallback>Ahri</AvatarFallback>
         </Avatar>
       </div>

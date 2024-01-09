@@ -29,15 +29,11 @@ readFile(filePath, 'utf8', (err, data) => {
     }
     return costToAmountMap[cost]
   }
-
   // 转换数据结构
   const transformedData = Object.values(jsonData.data).map((champion) => ({
     name: champion.name,
     cost: champion.tier,
-    totalAmount: calculateTotalAmount(champion.tier),
-    backgroundImage: '',
-    avatar: '',
-    synergies: ['', '']
+    totalAmount: calculateTotalAmount(champion.tier)
   }))
 
   let generatedObjects = []
@@ -46,7 +42,7 @@ readFile(filePath, 'utf8', (err, data) => {
   transformedData.forEach((item) => {
     for (let i = 0; i < item.totalAmount; i++) {
       let newObject = { ...item, id: idCounter++ } // 复制对象并添加 id
-      delete newObject.totalAmount // 如果不需要 totalAmount 属性，可以删除
+      delete newObject.totalAmount
       generatedObjects.push(newObject)
     }
   })

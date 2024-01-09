@@ -28,6 +28,7 @@ export default function HandCards() {
   )
   function refreshRandomCards() {
     const randomCards = drawCards(deckCards, probabilityByLevel)
+    console.log(randomCards)
     setHandCards(randomCards)
   }
   function buyExperience() {
