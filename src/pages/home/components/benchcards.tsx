@@ -31,7 +31,7 @@ export default function BenchCards() {
   return (
     <div className="flex h-48 w-full space-x-4 bg-sky-100">
       这是备战区
-      {benchCards.map((benchCard, index) => (
+      {benchCards.map((benchCard) => (
         /**
          * TODO:
          * 如果benchCards 里面有三个一样的英雄，则展示一个两星的
@@ -48,7 +48,7 @@ export default function BenchCards() {
             onMouseLeave={() => {
               setHoverHero(null)
             }}
-            key={index}
+            key={benchCard.id}
             src={`https://imgtft.daviddong.me/${benchCard.name}.png`}
           />
           <AvatarFallback> {benchCard.name}</AvatarFallback>
