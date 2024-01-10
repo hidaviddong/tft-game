@@ -103,29 +103,46 @@ export function computedProbabilityByLevel(level: number) {
   }
 }
 
-export function drawCards(deckCards: HeroType[], probabilityByLevel: ReturnType<typeof computedProbabilityByLevel>) {
-  const accumulatedWeights: number[] = []
-  let totalWeight = 0
+export function drawCards(cards: HeroType[], probability: ReturnType<typeof computedProbabilityByLevel>, count = 5) {
+  const drawnCards = []
+  for (let i = 0; i < count; i++) {
+    // 确定抽卡成本
+    const cost = determineCost(probability)
 
-  // 创建累积权重数组
-  Object.values(probabilityByLevel).forEach((probability) => {
-    totalWeight += probability
-    accumulatedWeights.push(totalWeight)
-  })
-  const handCards = []
+    // 过滤符合成本的卡牌
+    const filteredCards = cards.filter((card) => card.cost === cost)
 
-  for (let i = 0; i < 5; i++) {
-    const randomNum = Math.random() * totalWeight
-    const chosenCostIndex = accumulatedWeights.findIndex((weight) => randomNum <= weight)
-    const chosenCost = Object.keys(probabilityByLevel)[chosenCostIndex]
+    if (filteredCards.length === 0) {
+      continue // 如果没有符合条件的卡牌，则继续下一次抽取
+    }
 
-    const possibleCards = deckCards.filter((card) => card.cost === Number(chosenCost))
-    if (possibleCards.length > 0) {
-      const randomCard = possibleCards[Math.floor(Math.random() * possibleCards.length)]
-      handCards.push(randomCard)
+    // 随机选择一张卡牌
+    const randomIndex = Math.floor(Math.random() * filteredCards.length)
+    const drawnCard = filteredCards[randomIndex]
+
+    // 添加到抽取的卡牌数组中
+    drawnCards.push(drawnCard)
+
+    // 从原数组中移除这张卡牌
+    cards = cards.filter((card) => card.id !== drawnCard.id)
+  }
+
+  return drawnCards
+}
+
+function determineCost(probability: { [key: number]: number }) {
+  let total = 0
+  for (const cost in probability) {
+    total += probability[cost]
+  }
+
+  let random = Math.random() * total
+  for (const cost in probability) {
+    random -= probability[cost]
+    if (random <= 0) {
+      return parseInt(cost)
     }
   }
-  return handCards
 }
 
 export function findHeroFromDeck(deck: HeroType[], heroName: string) {
