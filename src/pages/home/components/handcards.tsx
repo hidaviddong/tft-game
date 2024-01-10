@@ -26,11 +26,12 @@ export default function HandCards() {
     [],
     { eventOptions: { passive: true } }
   )
+
   function refreshRandomCards() {
     const randomCards = drawCards(deckCards, probabilityByLevel)
-    console.log(randomCards)
     setHandCards(randomCards)
   }
+
   function buyExperience() {
     if (playerLevel < 10) {
       setPlayerLevel(playerLevel + 1)
